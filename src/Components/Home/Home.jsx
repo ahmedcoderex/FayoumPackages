@@ -19,11 +19,11 @@ export default function Home() {
     }
   }
   return (
-    <section className="home bg-cover bg-center lg:bg-[url(./bgForPC.webp)] bg-[url(./bgForMob.webp)]">
+    <section className="home bg-cover bg-center lg:bg-[url(/bgForPC.webp)] bg-[url(/bgForMob.webp)]">
       <div className="container  h-screen mx-auto flex items-center justify-center lg:block">
         <div className="card lg:text-white text-black rounded-lg absolute right-1/2 top-1/2 transform translate-x-1/2 -translate-y-1/2  lg:right-0 lg:top-0 lg:translate-0 py-6 px-4 flex flex-col items-center   text-center justify-center w-[80%] max-h-screen lg:w-1/2 lg:h-screen ">
           <img
-            src="./mainPhoto.webp"
+            src="/mainPhoto.webp"
             className="w-24 lg:w-42 rounded-full  absolute  -top-12 border-2 border-white  lg:relative"
             alt="mainPhoto"
           />
