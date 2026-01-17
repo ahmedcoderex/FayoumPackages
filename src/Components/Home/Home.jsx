@@ -19,7 +19,7 @@ export default function Home() {
     }
   }
   return (
-    <section className="home bg-cover bg-center lg:bg-[url(/bgForPC.webp)] bg-[url(/bgForMob.webp)]">
+    <section className="home bg-cover bg-center">
       <div className="container  h-screen mx-auto flex items-center justify-center lg:block">
         <div className="card lg:text-white text-black rounded-lg absolute right-1/2 top-1/2 transform translate-x-1/2 -translate-y-1/2  lg:right-0 lg:top-0 lg:translate-0 py-6 px-4 flex flex-col items-center   text-center justify-center w-[80%] max-h-screen lg:w-1/2 lg:h-screen ">
           <img
@@ -59,7 +59,7 @@ export default function Home() {
             <a
               href="https://www.tiktok.com/@mohamedali_photographer?_t=ZS-90uL9uOTzW6&_r=1"
               target="_blank"
-              className="w-12 h-12 rounded-full cursor-pointer text-xl flex justify-center items-center border-2 border-black text-black   hover:bg-black hover:text-white transition-all duration-300 hover:border-white"
+              className="w-12 h-12 rounded-full cursor-pointer text-xl flex justify-center items-center border-2 border-white text-white   hover:bg-white hover:text-black transition-all duration-300 hover:border-white"
             >
               <i className="fa-brands fa-tiktok"></i>
             </a>

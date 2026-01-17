@@ -155,7 +155,7 @@ export default function Packages() {
         <div className="text-center  text-gray-500 italic mt-12 text-2xl px-4">
           <span>
             {t(
-              "When changing the wedding date, the booking will not be canceled — you can only change the photography date."
+              "When changing the wedding date, the booking will not be canceled — you can only change the photography date.",
             )}
           </span>
         </div>
