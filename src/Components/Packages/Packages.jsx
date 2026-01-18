@@ -87,8 +87,8 @@ export default function Packages() {
   return (
     <section className="packages bg-gray-900 text-white min-h-screen p-4 sm:p-8">
       <div className="container mx-auto">
-        <h1 className="text-6xl font-bold text-center my-12">
-          <span className="bg-linear-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+        <h1 className="text-6xl font-bold text-center my-12 mb-24">
+          <span className="bg-indigo-500 shadow-lg shadow-indigo-500/50  px-12 rounded-2xl bg-clip-text text-transparent">
             {t("Packages")}
           </span>
         </h1>
@@ -96,21 +96,21 @@ export default function Packages() {
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
           {packages.map((pkg, index) => (
             <motion.div
-              initial={{ y: 200, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               transition={{
-                duration: 0.3,
+                duration: 0.6,
               }}
               key={index}
               className="bg-gray-800 rounded-2xl p-6 border border-gray-700 flex flex-col transform hover:scale-101 transition-transform duration-300"
             >
-              <h2 className="text-center text-4xl font-bold text-purple-400 mb-6">
+              <h2 className="text-center text-4xl font-bold text-indigo-500  mb-6">
                 {pkg.title}
               </h2>
               <ul className="space-y-3 grow">
                 {pkg.features.map((feature, i) => (
                   <li key={i} className="flex items-center gap-2 text-2xl">
-                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                    <span className="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
                     <span className="text-gray-300">{t(feature)}</span>
                   </li>
                 ))}
@@ -123,36 +123,43 @@ export default function Packages() {
                   {pkg.newPrice} <span>{t("Pound")}</span>
                 </div>
               </div>
-              {/* <button className="mt-8 w-full bg-linear-to-r from-blue-500 to-purple-600 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity">
-                {t("Choose Plan")}
-              </button> */}
+      
             </motion.div>
           ))}
         </div>
 
         <div className="mt-16 bg-gray-800 rounded-2xl p-6 sm:p-8 border border-gray-700">
-          <h1 className="flex items-center justify-center gap-4 text-3xl font-bold mb-8">
+          <h1 className="flex items-center justify-center gap-4 text-3xl font-bold mb-8 text-center flex-col lg:text-start lg:flex-row">
             <span role="img" aria-label="camera">
               📸
             </span>
             <span>{t("Additional Photography Options")}</span>
           </h1>
-          <ul className="space-y-4">
+          <ul className="space-y-4 plus-options">
             {additionalOptions.map((option, index) => (
-              <li
+              <motion.li
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{
+                duration: 0.6,
+              }}
                 key={index}
-                className="flex text-2xl justify-between items-center border-b border-gray-700 pb-3 text-gray-300"
+                className="flex text-2xl justify-between items-center text-gray-300 bg-linear-to-l
+                 from-gray-800 to-gray-700 py-8 px-2 rounded-xl cursor-pointer flex-col gap-2 lg:flex-row hover:scale-102 
+                 hover:border-2 relative border-gray-700 hover:border-white before:absolute before:content-[''] before:-left-50 hover:before:left-[calc(100%+100px)]  
+                 before:transition-all before:top-1/2 before:-translate-y-1/2  before:duration-300 before:rotate-45 before:h-[calc(100%+100px)]
+                  before:[box-shadow:0_0_50px_10px_rgba(255,255,255,0.4)] before:opacity-80 before:bg-white   transition-all duration-300 overflow-hidden"
               >
                 <span>{t(option.text)}</span>
-                <span className="font-semibold text-purple-400">
+                <span className="text-sm text-white min-w-22 min-h-8 flex justify-center items-center rounded-3xl  bg-indigo-500 shadow-lg shadow-indigo-500/50">
                   {t(option.price)}
                 </span>
-              </li>
+              </motion.li>
             ))}
           </ul>
         </div>
 
-        <div className="text-center  text-gray-500 italic mt-12 text-2xl px-4">
+        <div className="text-center  text-white rounded-md py-2 italic mt-12 text-2xl px-4 bg-indigo-500 shadow-lg shadow-indigo-500/50">
           <span>
             {t(
               "When changing the wedding date, the booking will not be canceled — you can only change the photography date.",
