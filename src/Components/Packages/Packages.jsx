@@ -93,7 +93,7 @@ export default function Packages() {
           </span>
         </h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {packages.map((pkg, index) => (
             <motion.div
               initial={{ opacity: 0 }}
@@ -102,21 +102,22 @@ export default function Packages() {
                 duration: 0.6,
               }}
               key={index}
-              className="bg-gray-800 rounded-2xl p-6 border border-gray-700 flex flex-col transform hover:scale-101 transition-transform duration-300"
+              className="bg-gray-800 rounded-2xl p-6 border  border-gray-700 flex flex-col transform hover:scale-101 transition-transform duration-300"
             >
-              <h2 className="text-center text-4xl font-bold text-indigo-500  mb-6">
+              <h2 className="text-center text-4xl font-bold text-indigo-500 border-2 py-4 rounded-2xl mb-6">
                 {pkg.title}
               </h2>
-              <ul className="space-y-3 grow">
+              <ul className="space-y-8 py-6 grow bg-linear-to-t px-2
+                 from-gray-800 to-gray-700 rounded-2xl">
                 {pkg.features.map((feature, i) => (
                   <li key={i} className="flex items-center gap-2 text-2xl">
-                    <span className="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
+                    <span className="w-2 h-2 bg-indigo-500 rounded-full mr-2"></span>
                     <span className="text-gray-300">{t(feature)}</span>
                   </li>
                 ))}
               </ul>
-              <div className="text-center mt-8">
-                <div className="text-gray-500 line-through text-xl">
+              <div className="text-center mt-8 bg-indigo-500 py-4 rounded-xl">
+                <div className="text-gray-200 line-through text-xl">
                   {pkg.oldPrice} <span>{t("Pound")}</span>
                 </div>
                 <div className="text-4xl font-bold">

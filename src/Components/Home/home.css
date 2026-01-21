@@ -2,28 +2,3 @@ section.home .card {
   background-color: rgba(0, 0, 0, 0.445);
 }
 
-.home {
-  background: 
-    radial-gradient(circle at 15% 85%, rgba(79, 70, 229, 0.15) 0%, transparent 25%),
-    radial-gradient(circle at 85% 15%, rgba(236, 72, 153, 0.12) 0%, transparent 30%),
-    #000814;
-  position: relative;
-  overflow: hidden;
-}
-
-/* دوائر متحركة خفيفة (اختياري) */
-.home::before {
-  content: "";
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.2) 10%, transparent 40%);
-  top: -100px;
-  left: -100px;
-  animation: float 18s infinite ease-in-out;
-}
-
-@keyframes float {
-  0%, 100% { transform: translate(0, 0); }
-  50% { transform: translate(120px, 80px); }
-}
